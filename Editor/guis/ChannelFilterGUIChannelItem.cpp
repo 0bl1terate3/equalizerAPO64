@@ -34,7 +34,7 @@ void ChannelFilterGUIChannelItem::paint(QPainter* painter, const QStyleOptionGra
 
 	if (isSelected())
 	{
-		color = QColor(176, 229, 255);
+		color = QColor(255, 176, 176);
 	}
 	else
 	{

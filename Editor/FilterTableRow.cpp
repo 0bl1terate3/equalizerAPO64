@@ -101,22 +101,22 @@ void FilterTableRow::paintEvent(QPaintEvent*)
 
 	bool dark = GUIHelper::isDarkMode();
 
-	QColor color;
-	if (table->getSelectedItems().contains(item))
-	{
-		if (table->getFocusedItem() == item)
-			color = dark ? QColor(44, 111, 222) : QColor(64, 136, 255);
-		else
-			color = dark ? QColor(34, 86, 171) : QColor(97, 143, 219);
-	}
-	else
-	{
-		if (table->getFocusedItem() == item)
-			color = dark ? QColor(100, 100, 100) : QColor(160, 160, 160);
-		else
-			color = dark ? QColor(80, 80, 80) : QColor(180, 180, 180);
-	}
-	painter.setPen(color);
+       QColor color;
+       if (table->getSelectedItems().contains(item))
+       {
+               if (table->getFocusedItem() == item)
+                       color = dark ? QColor(180, 0, 40) : QColor(220, 20, 60);
+               else
+                       color = dark ? QColor(140, 0, 30) : QColor(190, 30, 70);
+       }
+       else
+       {
+               if (table->getFocusedItem() == item)
+                       color = dark ? QColor(100, 100, 100) : QColor(160, 160, 160);
+               else
+                       color = dark ? QColor(80, 80, 80) : QColor(180, 180, 180);
+       }
+       painter.setPen(color);
 
 	QLinearGradient gradient(r.topLeft(), r.bottomLeft());
 	gradient.setColorAt(0, dark ? QColor(70,70,70) : QColor(255, 255, 255));
